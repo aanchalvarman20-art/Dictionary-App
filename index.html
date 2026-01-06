@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dictionary App</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+        <h1 class="text-2xl font-bold text-center mb-4">📘 Dictionary App</h1>
+
+        <!-- Search Input -->
+        <div class="flex gap-2 mb-4">
+            <input 
+                type="text" 
+                id="wordInput"
+                placeholder="Enter a word"
+                class="flex-1 border p-2 rounded"
+            />
+            <button 
+                id="searchBtn"
+                class="bg-blue-500 text-white px-4 rounded hover:bg-blue-600">
+                Search
+            </button>
+        </div>
+
+        <!-- Result Section -->
+        <div id="result" class="hidden">
+            <h2 id="word" class="text-xl font-semibold"></h2>
+            <p id="phonetic" class="text-gray-500"></p>
+
+            <button 
+                id="audioBtn"
+                class="mt-2 bg-green-500 text-white px-3 py-1 rounded hidden">
+                🔊 Play Audio
+            </button>
+
+            <p class="mt-3">
+                <span class="font-semibold">Part of Speech:</span>
+                <span id="partOfSpeech"></span>
+            </p>
+
+            <p class="mt-2">
+                <span class="font-semibold">Meaning:</span>
+                <span id="meaning"></span>
+            </p>
+
+            <p class="mt-2">
+                <span class="font-semibold">Example:</span>
+                <span id="example"></span>
+            </p>
+        </div>
+
+        <!-- Error Message -->
+        <p id="error" class="text-red-500 mt-4 hidden"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
